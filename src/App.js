@@ -4,7 +4,9 @@ import {
   Route,
   Link
 } from 'react-router-dom'
+import './App.css';
 import Contact from './containers/Contact/Contact';
+import Caregroup from './containers/Caregroup/Caregroup';
 
 const Home = () => (
   <div>
@@ -58,16 +60,22 @@ const BasicExample = () => (
       <ul>
         <li><Link to="/">Home</Link></li>
         <li><Link to="/about">About</Link></li>
+        <li><Link to="/caregroup">caregroup</Link></li>
         <li><Link to="/topics">Topics</Link></li>
         <li><Link to="/contact">Contact Us</Link></li>
       </ul>
 
       <hr/>
 
-      <Route exact path="/" component={Home}/>
-      <Route path="/about" component={About}/>
-      <Route path="/topics" component={Topics}/>
-      <Route path="/contact" component={Contact}/>
+      <div id="main">
+        <Route exact path="/" component={Home}/>
+        <Route path="/about" component={About}/>
+        <Route path="/caregroup" component={Caregroup}/>
+        <Route path="/topics" component={Topics}/>
+        <Route path="/contact" component={Contact}/>
+      </div>
+
+      
     </div>
   </Router>
 )
