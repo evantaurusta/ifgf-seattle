@@ -2,6 +2,7 @@
 
 # ignore config
 config.json
+yarn.lock
 
 # dependencies
 /node_modules
