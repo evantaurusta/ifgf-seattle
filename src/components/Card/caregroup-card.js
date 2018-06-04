@@ -3,6 +3,7 @@ import './caregroup-card.css';
 import Axios from 'axios';
 
 export default class caregroupCard extends Component {
+    GET_URL = 'https://fast-badlands-36660.herokuapp.com/sermons';
     constructor() {
         super();
         this.state = {
@@ -11,7 +12,7 @@ export default class caregroupCard extends Component {
         }
     }
     componentWillMount() {
-        Axios.get('https://fast-badlands-36660.herokuapp.com/sermons')
+        Axios.get(this.GET_URL) 
         .then (res => {
             const result = res.data;
             this.setState({ result });

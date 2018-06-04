@@ -7,6 +7,7 @@ import {
 import './App.css';
 import Contact from './containers/Contact/Contact';
 import Caregroup from './containers/Caregroup/Caregroup';
+require('dotenv').config()
 
 const Home = () => (
   <div>
