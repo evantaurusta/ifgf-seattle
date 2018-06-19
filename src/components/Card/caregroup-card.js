@@ -1,33 +1,46 @@
 import React, { Component } from 'react';
-import { Alert } from 'reactstrap';
 import './caregroup-card.css';
 import Axios from 'axios';
 
+
 export default class caregroupCard extends Component {
+
     constructor() {
         super();
         this.state = {
-            caregroups: ['hello', 'lalala', 'lala'],
+            caregroups: [],
             result: {}
         };
     }
     componentWillMount() {
-        Axios.get(this.GET_URL).then(res => {
-            const result = res.data;
-            this.setState({ result });
+        const config = {
+            auth: {
+                username: process.env.REACT_APP_API_USER,
+                password: process.env.REACT_APP_API_PW
+            }
+        };
+        console.log(config);
+        Axios.get('https://fast-badlands-36660.herokuapp.com/care-groups', config).then(res => {
+            console.log(res);
+            this.setState({ 
+                caregroups: res.data
+            });
         });
     }
-    populate() {
-        let content = [];
-        for (const cg of this.state.caregroups) {
-            content.push(
-                <div>
-                    {cg}
-                    <Alert color="info">hello world</Alert>
+    /**
+     * Populate a singleton card for a single caregroup
+     */
+    populate = () => {
+        if (this.state.caregroups.length === 0) {
+            return null;
+        }
+        return this.state.caregroups.map((cg, index) => {
+            return (
+                <div className="care-group-content">
+                    {cg.Name}
                 </div>
             );
-        }
-        return content;
+        });
     }
     render() {
         return (
