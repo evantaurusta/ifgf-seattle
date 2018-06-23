@@ -26,6 +26,7 @@ export default class CareGroupCard extends Component {
       "https://fast-badlands-36660.herokuapp.com/care-groups",
       config
     ).then(res => {
+      console.log(res.data);
       this.setState({
         caregroups: res.data
       });
@@ -42,6 +43,7 @@ export default class CareGroupCard extends Component {
       return (
         <div className="Card" key={index}>
           <Card>
+            <img src={cg.MainPhotoPath} name={cg.Name} alt={cg.Name}/>
             <CardContent>
               <Typography component="p">{cg.Name}</Typography>
               <Typography component="p">

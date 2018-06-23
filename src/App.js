@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import './App.css';
-import Contact from './containers/Contact/Contact';
 import Caregroup from './containers/Caregroup/Caregroup';
 
 require('dotenv').config({ path: __dirname + '/.env' });
@@ -76,7 +75,6 @@ const BasicExample = () => (
                 <Route path="/about" component={About} />
                 <Route path="/caregroup" component={Caregroup} />
                 <Route path="/topics" component={Topics} />
-                <Route path="/contact" component={Contact} />
             </div>
         </div>
     </Router>
