@@ -1,0 +1,32 @@
+#prayer-request {
+  text-align: center;
+  margin: 0 20%;
+}
+
+#prayer-request #form-wrap {
+  margin-top: 25px;
+}
+
+#prayer-request #form-wrap form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#prayer-request #form-wrap form .field {
+  font-size: 1.1rem;
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 10px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+#prayer-request #form-wrap form textarea.message {
+  font-family: sans-serif;
+  height: 250px;
+}
+
+#prayer-request #form-wrap form button {
+  font-size: 1.1rem;
+}

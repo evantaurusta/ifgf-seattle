@@ -1,5 +1,12 @@
 # See https://help.github.com/ignore-files/ for more about ignoring files.
 
+# ignore config
+yarn.lock
+
+# ignore generated files
+generated
+generated/*
+
 # dependencies
 /node_modules
 

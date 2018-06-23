@@ -4,6 +4,7 @@ import {
   Route,
   Link
 } from 'react-router-dom'
+import PrayerRequest from './containers/PrayerRequest/PrayerRequest';
 
 const Home = () => (
   <div>
@@ -58,6 +59,7 @@ const BasicExample = () => (
         <li><Link to="/">Home</Link></li>
         <li><Link to="/about">About</Link></li>
         <li><Link to="/topics">Topics</Link></li>
+        <li><Link to="/pray">Prayer Request</Link></li>
       </ul>
 
       <hr/>
@@ -65,6 +67,7 @@ const BasicExample = () => (
       <Route exact path="/" component={Home}/>
       <Route path="/about" component={About}/>
       <Route path="/topics" component={Topics}/>
+      <Route path="/pray" component={PrayerRequest}/>
     </div>
   </Router>
 )
