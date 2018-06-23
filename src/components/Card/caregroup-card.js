@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
+import Card from '@material-ui/core/Card';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
 import './caregroup-card.css';
 import Axios from 'axios';
-
 
 export default class caregroupCard extends Component {
 
@@ -19,9 +23,7 @@ export default class caregroupCard extends Component {
                 password: process.env.REACT_APP_API_PW
             }
         };
-        console.log(config);
         Axios.get('https://fast-badlands-36660.herokuapp.com/care-groups', config).then(res => {
-            console.log(res);
             this.setState({ 
                 caregroups: res.data
             });
@@ -36,16 +38,31 @@ export default class caregroupCard extends Component {
         }
         return this.state.caregroups.map((cg, index) => {
             return (
-                <div className="care-group-content">
-                    {cg.Name}
+                <div className="Card" key={index}>
+                <Card>
+                    <CardContent>
+                        <Typography component='p'>
+                        {cg.Name}
+                        </Typography>
+                        <Typography component='p'>
+                        {cg.ShortName}
+                        {cg.Description}
+                        </Typography>
+                        
+                    </CardContent>
+                    <CardActions>
+                        <Button>Share</Button>
+                        <Button>Learn More</Button>
+                    </CardActions>
+                </Card>
                 </div>
             );
         });
     }
+
     render() {
         return (
-            <div className="card-container">
-                <p>this is h1</p>
+            <div>
                 {this.populate()}
             </div>
         );
