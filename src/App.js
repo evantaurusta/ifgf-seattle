@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import './App.css';
 import Caregroup from './containers/Caregroup/Caregroup';
+import PrayerRequest from './containers/PrayerRequest/PrayerRequest';
 
 require('dotenv').config({ path: __dirname + '/.env' });
 
@@ -64,7 +65,7 @@ const BasicExample = () => (
                     <Link to="/topics">Topics</Link>
                 </li>
                 <li>
-                    <Link to="/contact">Contact Us</Link>
+                    <Link to="/pray">Prayer Request</Link>
                 </li>
             </ul>
 
@@ -75,6 +76,7 @@ const BasicExample = () => (
                 <Route path="/about" component={About} />
                 <Route path="/caregroup" component={Caregroup} />
                 <Route path="/topics" component={Topics} />
+                <Route path="/pray" component={PrayerRequest}/>
             </div>
         </div>
     </Router>
