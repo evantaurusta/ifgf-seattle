@@ -35,6 +35,7 @@ export default class PrayerRequest extends Component {
                     <Form>
                         <form onSubmit={this.submitForm}>
                             <Text className="field email" field="email" placeholder="Your E-mail Address" onChange={this.changeEmail} />
+                            <Text className="field name" field="name" placeholder="(Optional) Your name" />
                             <TextArea className="field message" field="message" placeholder="What do you need prayer for?" onChange={this.changeMessage} />
                             <button type="submit">Submit</button>
                         </form>
