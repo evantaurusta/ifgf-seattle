@@ -30,7 +30,10 @@ export default class PrayerRequest extends Component {
         return (
             <div id="prayer-request" className="container">
                 <h1>Prayer Request</h1>
+                <p><em>Be joyful in hope, patient in affliction, faithful in prayer.
+                <br />(Romans 12:12)</em></p>
                 <p>All information will be kept confidential. If you would like us to reach back to you, please leave either your email or phone number below, and we will respond as soon as possible. We look forward to hearing your breakthrough!</p>
+                <p>IFGF Seattle Intercessor Ministry</p>
                 <div id="form-wrap">
                     <Form>
                         <form onSubmit={this.submitForm}>
