@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Form, Text, TextArea } from 'react-form';
-import './PrayerRequest.css';
+import '../../generated/PrayerRequest.css';
 
 export default class PrayerRequest extends Component {
 

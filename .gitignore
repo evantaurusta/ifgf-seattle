@@ -3,6 +3,10 @@
 # ignore config
 yarn.lock
 
+# ignore generated files
+generated
+generated/*
+
 # dependencies
 /node_modules
 
