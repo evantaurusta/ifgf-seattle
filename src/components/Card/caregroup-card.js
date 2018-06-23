@@ -7,7 +7,7 @@ import Typography from "@material-ui/core/Typography";
 import "./caregroup-card.css";
 import Axios from "axios";
 
-export default class caregroupCard extends Component {
+export default class CareGroupCard extends Component {
   constructor() {
     super();
     this.state = {
