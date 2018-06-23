@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Form, Text, TextArea } from 'react-form';
-import '../../generated/PrayerRequest.css';
+import './PrayerRequest.css';
 
 export default class PrayerRequest extends Component {
 
@@ -30,7 +30,7 @@ export default class PrayerRequest extends Component {
         return (
             <div id="prayer-request" className="container">
                 <h1>Prayer Request</h1>
-                <p>Our motto is PUSH, Pray Until Something Happens!</p>
+                <p>All information will be kept confidential. If you would like us to reach back to you, please leave either your email or phone number below, and we will respond as soon as possible. We look forward to hearing your breakthrough!</p>
                 <div id="form-wrap">
                     <Form>
                         <form onSubmit={this.submitForm}>
