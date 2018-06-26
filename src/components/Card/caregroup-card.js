@@ -6,6 +6,7 @@ import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import "./caregroup-card.css";
 import Axios from "axios";
+import Config from './../../config.json';
 
 export default class CareGroupCard extends Component {
   constructor() {
@@ -23,10 +24,9 @@ export default class CareGroupCard extends Component {
       }
     };
     Axios.get(
-      "https://fast-badlands-36660.herokuapp.com/care-groups",
+      Config.api.host + '/care-groups',
       config
     ).then(res => {
-      console.log(res.data);
       this.setState({
         caregroups: res.data
       });
