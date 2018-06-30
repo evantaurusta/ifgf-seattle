@@ -6,7 +6,7 @@ import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import "./caregroup-card.css";
 import Axios from "axios";
-import Config from './../../config.json';
+import Config from "./../../config.json";
 
 export default class CareGroupCard extends Component {
   constructor() {
@@ -23,10 +23,7 @@ export default class CareGroupCard extends Component {
         password: process.env.REACT_APP_API_PW
       }
     };
-    Axios.get(
-      Config.api.host + '/care-groups',
-      config
-    ).then(res => {
+    Axios.get(Config.api.host + "/care-groups", config).then(res => {
       this.setState({
         caregroups: res.data
       });
@@ -41,9 +38,12 @@ export default class CareGroupCard extends Component {
     }
     return this.state.caregroups.map((cg, index) => {
       return (
-        <div className="Card" key={index}>
-          <Card>
-            <img src={cg.MainPhotoPath} name={cg.Name} alt={cg.Name}/>
+        <div key={index}>
+          <Card className="card">
+
+            <img className="image" src={cg.MainPhotoPath} name={cg.Name} alt={cg.Name} />
+
+            <div className="details">
             <CardContent>
               <Typography component="p">{cg.Name}</Typography>
               <Typography component="p">
@@ -51,10 +51,8 @@ export default class CareGroupCard extends Component {
                 {cg.Description}
               </Typography>
             </CardContent>
-            <CardActions>
-              <Button>Share</Button>
-              <Button>Learn More</Button>
-            </CardActions>
+            </div>
+
           </Card>
         </div>
       );
