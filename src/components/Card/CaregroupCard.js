@@ -6,29 +6,7 @@ import Axios from 'axios';
 import Config from './../../config.json';
 import { withStyles } from '../../../node_modules/@material-ui/core';
 
-const CardStyle = theme => ({
-  card: {
-    display: 'flex',
-    margin: 16,
-    width: 1000,
-    height: 400,
-  },
-  details: {
-    display: 'flex',
-    flexDirection: 'column',
-  },
-  content: {
-    flex: '1 0 auto',
-  },
-  image: {
-    width: 500,
-    height: 500,
-  },
-  title:{
-    'margin-top': 10,
-    'margin-bottom': 10,
-  }
-});
+import CardStyle from './Styles/CardStyle';
 
 class CaregroupCard extends Component {
 
@@ -52,9 +30,9 @@ class CaregroupCard extends Component {
       });
     });
   }
-  // /**
-  //  * Populate a singleton card for a single caregroup
-  //  */
+  /**
+   * Populate card with data from the api
+   */
   populate = () => {
     const {classes} = this.props;
     if (this.state.caregroups.length === 0) {
