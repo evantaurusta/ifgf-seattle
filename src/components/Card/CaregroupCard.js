@@ -41,9 +41,7 @@ class CaregroupCard extends Component {
     return this.state.caregroups.map((cg, index) => {
       return (
         <div key={index}>
-          <Card
-            className={classes.card}
-          >
+          <Card className={classes.card}>
             <img
               className={classes.image}
               src={cg.MainPhotoPath}

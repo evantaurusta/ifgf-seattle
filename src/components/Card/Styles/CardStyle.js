@@ -1,20 +1,14 @@
 export default () => ({
   card: {
-    display: 'flex',
     margin: 16,
-    width: 1000,
-    height: 400
-  },
-  details: {
-    display: 'flex',
-    flexDirection: 'column'
-  },
-  content: {
-    flex: '1 0 auto'
+    width: 600,
+    height: 700,
+    'align-items': 'center',
+    'justify-content': 'center',
   },
   image: {
-    width: 500,
-    height: 500
+    'max-width': '100%',
+    'max-height': '100%'
   },
   title: {
     'margin-top': 10,
