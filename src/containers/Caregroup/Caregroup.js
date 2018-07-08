@@ -8,7 +8,7 @@ export default class CareGroup extends Component {
     return (
       <React.Fragment>
         <h1>Care Group</h1>
-        <div className='container'>
+        <div className='caregroup'>
           <CaregroupCard />
         </div>
 
