@@ -25,7 +25,6 @@ const CaregroupCard  = ({caregroup, classes, index}) =>
             {caregroup.Description}
           </Typography>
         </CardContent>
-
       </div>
     </Card>
   </React.Fragment>;
