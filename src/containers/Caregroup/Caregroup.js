@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './Caregroup.css';
-import Config from './../../config.json';
+import Config from 'config.json';
 import Axios from 'axios';
-import CaregroupCard from '../../components/Card/CaregroupCard';
+import CaregroupCard from 'components/Card/CaregroupCard';
 
 class CareGroup extends Component {
 
