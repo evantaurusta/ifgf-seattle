@@ -1,5 +1,25 @@
+h1 {
+  font-size: 3.3125rem;
+  line-height: 1.15em; 
+}
+
+h2 {
+  font-size: 2.25rem;
+  line-height: 1.5em; }
+
+h3 {
+  font-size: 1.5625rem;
+  line-height: 1.4em; }
+
+h4 {
+  font-size: 1.125rem;
+  line-height: 1.5em; }
+
+body, h1, h2, h3, h4, h5, h6 {
+  font-family: Raleway;
+  font-weight: 300;
+  line-height: 1.5em; }
+
 body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+  margin: 0px;
 }
