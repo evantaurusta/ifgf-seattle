@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
-import classNames from "classnames";
-import withStyles from "@material-ui/core/styles/withStyles";
-import Parallax from "components/Parallax/Parallax.jsx";
-import GridContainer from "components/Grid/GridContainer.jsx";
-import GridItem from "components/Grid/GridItem.jsx";
-import Button from "components/CustomButtons/Button.jsx";
-import landingPageStyle from "assets/jss/material-kit-react/views/landingPage.jsx";
+import classNames from 'classnames';
+import withStyles from '@material-ui/core/styles/withStyles';
+import Parallax from 'components/Parallax/Parallax.jsx';
+import GridContainer from 'components/Grid/GridContainer.jsx';
+import GridItem from 'components/Grid/GridItem.jsx';
+import Button from 'components/CustomButtons/Button.jsx';
+import landingPageStyle from 'assets/jss/material-kit-react/views/landingPage.jsx';
 
 class Home extends Component {
   
   render() {
     const { classes } = this.props;
     return (
-        <div className="container">
-            <Parallax filter image={require("assets/img/ifgf-bg.jpg")}>
+      <div className="container">
+        <Parallax filter image={require('assets/img/ifgf-bg.jpg')}>
           <div className={classes.container}>
             <GridContainer>
               <GridItem xs={12} sm={12} md={6}>
@@ -97,7 +97,7 @@ class Home extends Component {
           </div>
         </div>
 
-        </div>
+      </div>
     );
   }
 }
