@@ -25,7 +25,7 @@ const App = () => (
       <div id="main">
         <Route exact path="/" component={Home} />
         <Route path="/about" component={About} />
-        <Route path="/caregroups" component={Caregroup} />
+        <Route path="/care-groups" component={Caregroup} />
         <Route path="/pray" component={PrayerRequest}/>
       </div>
     </div>

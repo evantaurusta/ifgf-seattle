@@ -14,7 +14,7 @@ function HeaderLinks({ ...props }) {
         <Button href="/about" color="transparent" className={classes.navLink}>
           About
         </Button>
-        <Button href="/caregroups" color="transparent" className={classes.navLink}>
+        <Button href="/care-groups" color="transparent" className={classes.navLink}>
           Caregroups
         </Button>
         <Button href="/pray" color="transparent" className={classes.navLink}>
