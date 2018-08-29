@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import { Form, Text, TextArea } from 'react-form';
-import classNames from 'classnames';
 import Parallax from 'components/Parallax/Parallax.jsx';
 import GridContainer from 'components/Grid/GridContainer.jsx';
 import GridItem from 'components/Grid/GridItem.jsx';
 
-export default class PrayerRequest extends Component {
+class PrayerRequest extends Component {
 
   constructor() {
     super();
@@ -66,3 +65,5 @@ export default class PrayerRequest extends Component {
     }
 
 }
+
+export default PrayerRequest;
