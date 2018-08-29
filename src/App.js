@@ -3,9 +3,9 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Caregroup from 'containers/Caregroup/Caregroup';
 import PrayerRequest from 'containers/PrayerRequest/PrayerRequest';
 import About from 'containers/About/About';
-import Home from 'containers/Home/Home';
 import Header from 'components/Header/Header.jsx';
 import HeaderLinks from 'components/Header/HeaderLinks.js';
+import LandingPage from './containers/LandingPage/LandingPage';
 
 require('dotenv').config({ path: __dirname + '/.env' });
 
@@ -23,7 +23,7 @@ const App = () => (
         }}
       /> 
       <div id="main">
-        <Route exact path="/" component={Home} />
+        <Route exact path="/" component={LandingPage} />
         <Route path="/about" component={About} />
         <Route path="/care-groups" component={Caregroup} />
         <Route path="/pray" component={PrayerRequest}/>
