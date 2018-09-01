@@ -48,16 +48,8 @@ class PrayerRequest extends Component {
                 <br />(Romans 12:12)</em></p>
               <p>All information will be kept confidential. If you would like us to reach back to you, please leave either your email or phone number below, and we will respond as soon as possible. We look forward to hearing your breakthrough!</p>
               <p>IFGF Seattle Intercessor Ministry</p>
-              <div id="form-wrap">
-                <Form>
-                  <form onSubmit={this.submitForm}>
-                    <Text className="field email" field="email" placeholder="Your E-mail Address" onChange={this.changeEmail} />
-                    <Text className="field name" field="name" placeholder="(Optional) Your name" />
-                    <TextArea className="field message" field="message" placeholder="What do you need prayer for?" onChange={this.changeMessage} />
-                    <button type="submit">Submit</button>
-                  </form>
-                </Form>
-              </div>
+
+              
             </div>
           </div>
         </div>
