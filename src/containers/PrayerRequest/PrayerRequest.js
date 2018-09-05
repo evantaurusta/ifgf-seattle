@@ -5,7 +5,7 @@ import withStyles from '@material-ui/core/styles/withStyles';
 import Parallax from 'components/Parallax/Parallax.jsx';
 import GridContainer from 'components/Grid/GridContainer.jsx';
 import GridItem from 'components/Grid/GridItem.jsx';
-import landingPageStyle from 'assets/jss/material-kit-react/views/landingPage.jsx';
+import landingPageStyle from 'assets/jss/material-kit-react/views/PrayerRequestPage.jsx';
 
 class PrayerRequest extends Component {
 
@@ -19,8 +19,6 @@ class PrayerRequest extends Component {
 
     submitForm = (e) => {
       e.preventDefault();
-      // console.log('Email: ' + this.state.email);
-      // console.log('Message: ' + this.state.message);
     }
 
     changeEmail = (email) => {
