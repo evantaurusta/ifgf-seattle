@@ -3,9 +3,11 @@ import classNames from 'classnames';
 import { Form, Text, TextArea } from 'react-form';
 import withStyles from '@material-ui/core/styles/withStyles';
 import Parallax from 'components/Parallax/Parallax.jsx';
+import CustomInput from 'components/CustomInput/CustomInput.jsx';
 import GridContainer from 'components/Grid/GridContainer.jsx';
 import GridItem from 'components/Grid/GridItem.jsx';
-import landingPageStyle from 'assets/jss/material-kit-react/views/PrayerRequestPage.jsx';
+import prayerRequestPage from 'assets/jss/material-kit-react/views/PrayerRequestPage.jsx';
+
 
 class PrayerRequest extends Component {
 
@@ -52,6 +54,19 @@ class PrayerRequest extends Component {
               <p>All information will be kept confidential. If you would like us to reach back to you, please leave either your email or phone number below, and we will respond as soon as possible. We look forward to hearing your breakthrough!</p>
               <p>IFGF Seattle Intercessor Ministry</p>
 
+              <Form>
+                <CustomInput
+                  labelText="Name"
+                  id="disabled"
+                  formControlProps={{
+                    fullWidth: true
+                  }}
+                  inputProps={{
+                    disabled: false
+                  }}
+                />
+              </Form>
+
             </div>
           </div>
         </div>
@@ -60,4 +75,4 @@ class PrayerRequest extends Component {
 
 }
 
-export default withStyles(landingPageStyle)(PrayerRequest);
+export default withStyles(prayerRequestPage)(PrayerRequest);
