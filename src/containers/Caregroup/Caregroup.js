@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import Config from 'config.json';
 import Axios from 'axios';
+import withStyles from '@material-ui/core/styles/withStyles';
 import CaregroupCard from 'components/Card/CaregroupCard';
+import CareGroupStyle from 'assets/jss/material-kit-react/views/landingPage.jsx';
 
 class CareGroup extends Component {
 
