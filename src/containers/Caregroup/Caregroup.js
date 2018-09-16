@@ -50,4 +50,4 @@ class CareGroup extends Component {
     );
   }
 }
-export default CareGroup;
+export default withStyles(CareGroupStyle)(CareGroup);
