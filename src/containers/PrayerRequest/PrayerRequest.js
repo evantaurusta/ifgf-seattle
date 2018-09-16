@@ -37,7 +37,7 @@ class PrayerRequest extends Component {
         <div className="container">
           <Parallax filter image={require('assets/img/ifgf-bg.jpg')}>
             <GridContainer>
-              <GridItem xs={12} sm={12} md={6}>
+              <GridItem xs={12} sm={12} md={4}>
                 
                 <h2>Inside Parallax</h2>
 
@@ -59,7 +59,7 @@ class PrayerRequest extends Component {
                   labelText="Name"
                   id="disabled"
                   formControlProps={{
-                    fullWidth: true
+                    fullWidth: false
                   }}
                   inputProps={{
                     disabled: false
