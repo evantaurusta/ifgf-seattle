@@ -82,7 +82,8 @@ class PrayerRequest extends Component {
                     id="prayer"
                     formControlProps={{
                       fullWidth: true,
-                      required: true
+                      required: true,
+                      multiline: true
                     }}
                     inputProps={{
                       disabled: false
