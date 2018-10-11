@@ -83,10 +83,10 @@ class PrayerRequest extends Component {
                     formControlProps={{
                       fullWidth: true,
                       required: true,
-                      multiline: true
                     }}
                     inputProps={{
-                      disabled: false
+                      disabled: false,
+                      multiline: true
                     }}
                   />
                 </GridItem>
