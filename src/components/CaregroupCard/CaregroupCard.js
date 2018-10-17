@@ -1,32 +1,22 @@
 import React from 'react';
-import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
-import Typography from '@material-ui/core/Typography';
+import Card from 'components/Card/Card.jsx';
+import CardBody from 'components/Card/CardBody.jsx';
+
 import { withStyles } from '@material-ui/core';
 
 import CardStyle from './Styles/CardStyle';
 
-const CaregroupCard  = ({caregroup, classes, index}) => 
-  <React.Fragment key={index}>
-    <Card className={classes.card}>
-      <img
-        className={classes.image}
-        src={caregroup.MainPhotoPath}
-        name={caregroup.Name}
-        alt={caregroup.Name}
-      />
-      <div className={classes.details}>
-        <CardContent className={classes.content}>
-          <Typography className={classes.title} variant='title'>
-            {caregroup.Name}
-          </Typography>
-          <Typography variant='subheading'>
-            {caregroup.ShortName}
-            {caregroup.Description}
-          </Typography>
-        </CardContent>
-      </div>
+const CaregroupCard = ({caregroup, classes, index}) => 
+  <React.Fragment>
+    <img className={classes.imgCardTop} src={caregroup.MainPhotoPath} alt={caregroup.Name} />
+    <Card>
+      <CardBody>
+        <h4 className={classes.cardTitle}>{caregroup.Name}</h4>
+        <p>{caregroup.ShortName}</p>
+        <p>{caregroup.Description}</p>
+      </CardBody>
     </Card>
-  </React.Fragment>;
+  </React.Fragment>
+;
 
 export default withStyles(CardStyle)(CaregroupCard);
